@@ -1,3 +1,14 @@
+//==========================Sum of positive========================
+//https://www.codewars.com/kata/5715eaedb436cf5606000381/train/javascript
+// Using .reduce
+
+const positiveSum = (arr) =>
+  arr.reduce(
+    (accumulator, currentValue) =>
+      currentValue > 0 ? accumulator + currentValue : accumulator,
+    0
+  );
+
 //=======Find Maximum and Minimum Values of a List=======================
 //https://www.codewars.com/kata/577a98a6ae28071780000989/train/javascript
 
@@ -17,6 +28,11 @@ const min = (numbers) =>
 
 const smValorIndex = (arr, toReturn) =>
   toReturn === "value" ? Math.min(...arr) : arr.indexOf(Math.min(...arr));
+
+//=======================Array contains the value=======================
+//https://www.codewars.com/kata/57cc975ed542d3148f00015b/train/javascript
+
+const check = (a, x) => a.includes(x);
 
 //==================Least Larger=========================================
 //https://www.codewars.com/kata/5f8341f6d030dc002a69d7e4/train/javascript
