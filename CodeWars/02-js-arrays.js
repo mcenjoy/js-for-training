@@ -1,3 +1,20 @@
+//======================Training JS #4: Basic data types--Array===========
+//https://www.codewars.com/kata/571effabb625ed9b0600107a/train/javascript
+
+const getLength = (arr) => arr.length;
+const getFirst = (arr) => arr[0];
+const getLast = (arr) => arr[arr.length - 1];
+
+const pushElement = (arr) => {
+  const el = 1;
+  arr.push(el);
+  return arr;
+};
+const popElement = (arr) => {
+  arr.pop();
+  return arr;
+};
+
 //==========================Sum of positive========================
 //https://www.codewars.com/kata/5715eaedb436cf5606000381/train/javascript
 // Using .reduce
@@ -70,4 +87,15 @@ console.log(leastLarger([4, 1, 3, 5, 6], 4));
 console.log(findNextLargerIndex([4, 1, 3, 5, 6], 0));
 console.log(findNextLargerIndex([4, 1, 3, 5, 6], 4));
 
-//
+//========================2626. Array Reduce Transformation=============
+//https://leetcode.com/problems/array-reduce-transformation/description/
+
+const reduce = (nums, fn, init) => {
+  let result = init;
+  if (nums) {
+    for (let i = 0; i < nums.length; i++) {
+      result = fn(result, nums[i]);
+    }
+  }
+  return result;
+};

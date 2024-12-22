@@ -169,3 +169,18 @@ String.prototype.isUpperCase = function() {
 String.prototype.isUpperCase = function () {
   return /^[A-Z]*$/.test(this.replace(/[^A-Za-z]/g, ""));
 };
+
+//===========================Crash Override=============================================
+//https://www.codewars.com/kata/578c1e2edaa01a9a02000b7f/train/javascript
+
+const aliasGen = (firstNameInput, surnameInput) => {
+  const isValidLetter = (char) => /^[A-Z]$/i.test(char);
+
+  const firstLetterFirstName = firstNameInput.charAt(0).toUpperCase();
+  const firstLetterSurname = surnameInput.charAt(0).toUpperCase();
+
+  return isValidLetter(firstLetterFirstName) &&
+    isValidLetter(firstLetterSurname)
+    ? `${firstName[firstLetterFirstName]} ${surname[firstLetterSurname]}`
+    : "Your name must start with a letter from A - Z.";
+};

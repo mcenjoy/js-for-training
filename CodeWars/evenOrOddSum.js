@@ -54,4 +54,15 @@ const newEvensAndOdds = (digit) =>
   digit % 2 === 0 ? digit.toString(2) : digit.toString(16).toLowerCase();
 //const evensAndOdds = (digit) => digit.toString(n % 2 ? 16 : 2);
 
+//===========Training JS #10: loop statement --for===========================
+//https://www.codewars.com/kata/5721a78c283129e416000999/train/javascript
 
+function pickIt(arr) {
+  let odd = [],
+    even = [];
+  for (let x of arr) {
+    (i % 2 ? odd : even).push(x);
+  }
+
+  return [odd, even];
+}
